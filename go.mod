@@ -1,4 +1,4 @@
-module github.com/log-rush/server-devkit
+module github.com/log-rush/server-devkit/v2
 
 go 1.18
 

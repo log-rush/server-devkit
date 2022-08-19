@@ -2,7 +2,7 @@ package devkit
 
 import (
 	"github.com/gofiber/fiber/v2"
-	logRush "github.com/log-rush/server-devkit"
+	logRush "github.com/log-rush/server-devkit/v2"
 )
 
 type Plugin struct {
