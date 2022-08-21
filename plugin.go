@@ -9,12 +9,14 @@ type Plugin interface {
 }
 
 type LogPlugin interface {
+	Name() string
 	HandleLog(log Log)
 }
 
 type HandleLog = func(log Log)
 
 type RouterPlugin interface {
+	Name() string
 	SetupRouter(router fiber.Router)
 }
 

@@ -42,8 +42,9 @@ func NewLogPlugin(
 	logHandler logRush.HandleLog,
 ) logRush.LogPlugin {
 	p := Plugin{
-		name:       name,
-		LogHandler: logHandler,
+		name:          name,
+		LogHandler:    logHandler,
+		RouterHandler: func(router fiber.Router) {},
 	}
 
 	return &p
@@ -56,6 +57,7 @@ func NewRouterPlugin(
 	p := Plugin{
 		name:          name,
 		RouterHandler: routerHandler,
+		LogHandler:    func(log logRush.Log) {},
 	}
 
 	return &p
